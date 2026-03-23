@@ -40,6 +40,7 @@ import Loading from "../../components/Loading";
 import CustomerRegChatbot from "../Chatbot/CustomerRegChatbot";
 import TravelRecommChatbot from "../Chatbot/TravelRecommChatbot";
 import TripPlannerChatbot from "../Chatbot/TripPlannerChatbot";
+import { useTranslation } from "react-i18next";
 
 const CustomerRegisterChatbot = () => <CustomerRegChatbot />;
 const TravelModeRecomChatbot = () => <TravelRecommChatbot />;
@@ -54,6 +55,7 @@ const Home = () => {
 
   const [customers, setCustomers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
 
   // Get username from localStorage
   const [username, setUsername] = useState("");
@@ -108,12 +110,12 @@ const Home = () => {
   }, []);
 
   const sidebarItems = [
-    { id: "dashboard", icon: LayoutDashboard, label: "Overview" },
-    { id: "customer", icon: UserRound, label: "Customer List" },
-    { id: "trips", icon: Plane, label: "Travel Recommondation" },
-    { id: "chatbot", icon: NotebookPen, label: "Customer Register" },
-    { id: "tripplanner", icon: BotMessageSquare, label: "Support Buddy" },
-    { id: "settings", icon: Settings, label: "Settings" },
+    { id: "dashboard", icon: LayoutDashboard, label: t("sidebar.home") },
+    { id: "customer", icon: UserRound, label: t("sidebar.customeList") },
+    { id: "trips", icon: Plane, label: t("sidebar.travelRecommendations") },
+    { id: "chatbot", icon: NotebookPen, label: t("sidebar.customerRegister") },
+    { id: "tripplanner", icon: BotMessageSquare, label: t("sidebar.supportBuddy") },
+    { id: "settings", icon: Settings, label: t("sidebar.settings") },
   ];
 
   const stats = [
@@ -338,7 +340,7 @@ const Home = () => {
               className="w-full flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
             >
               <LogOut className="w-5 h-5" />
-              <span className="font-medium">Logout</span>
+              <span className="font-medium">{t("logout")}</span>
             </button>
           </div>
         </div>

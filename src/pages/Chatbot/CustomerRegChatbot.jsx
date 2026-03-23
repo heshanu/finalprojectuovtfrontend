@@ -1,13 +1,14 @@
 import { useState, useRef, useEffect } from "react"
 import { Send, MapPin, Compass, Plane, Bot, User } from "lucide-react"
 import axios from "axios"
-
+import { useTranslation } from "react-i18next";
 const CustomerRegChatbot = () => {
+    const { t } = useTranslation();
   const [messages, setMessages] = useState([
     {
       id: 1,
       sender: "bot",
-      text: "Hello! I'm your customer registration agent. I can help you register customers. How can I assist you today?",
+      text: t("customerRegisterbotText"),
       timestamp: new Date().toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",

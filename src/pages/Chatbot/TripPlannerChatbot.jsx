@@ -2,14 +2,15 @@ import { useState, useRef, useEffect } from "react"
 import { Send, MapPin, Compass, Plane, Bot, User, Download, X } from "lucide-react"
 import axios from "axios"
 import { SpinnerCircular } from 'spinners-react';
-
+import { useTranslation } from "react-i18next"
 
 const TripPlannerChatbot = () => {
+  const { t } = useTranslation();
   const [messages, setMessages] = useState([
     {
       id: 1,
       sender: "bot",
-      text: "Hello! I'm your Trip Planner Agent. Where would you like to explore today?",
+      text: t("tripPlannerbottext"),
       timestamp: new Date().toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",

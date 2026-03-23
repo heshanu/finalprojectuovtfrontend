@@ -5,13 +5,14 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useTranslation} from "react-i18next";
 
 const LoginRegisterPage = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const navigate = useNavigate();
-
+  const { t } = useTranslation();
   
   // Validation schemas
   const loginValidationSchema = Yup.object().shape({
@@ -62,8 +63,7 @@ const LoginRegisterPage = () => {
             </div>{" "}
             <p className="text-gray-300 text-lg mb-8">
               {" "}
-              Discover amazing destinations and share your travel stories with
-              fellow tourist guiders.{" "}
+             {t("guidebuddyExploreDestinationText")}{" "}
             </p>{" "}
             <div className="space-y-4">
               {" "}
@@ -77,11 +77,10 @@ const LoginRegisterPage = () => {
                   {" "}
                   <h3 className="font-semibold text-white">
                     {" "}
-                    Explore Destinations{" "}
+                   {t("guidebuddyshareTravelStoryText")}{" "}
                   </h3>{" "}
                   <p className="text-sm text-gray-400">
                     {" "}
-                    Find hidden gems and popular attractions{" "}
                   </p>{" "}
                 </div>{" "}
               </div>{" "}
@@ -95,12 +94,9 @@ const LoginRegisterPage = () => {
                   {" "}
                   <h3 className="font-semibold text-white">
                     {" "}
-                    Share Experiences{" "}
+                       {t("guidebuddyPlanyourjourneyText")}{" "}
                   </h3>{" "}
-                  <p className="text-sm text-gray-400">
-                    {" "}
-                    Connect with other tourist guiders worldwide{" "}
-                  </p>{" "}
+                  
                 </div>{" "}
               </div>{" "}
               <div className="flex items-start gap-3">
@@ -113,12 +109,9 @@ const LoginRegisterPage = () => {
                   {" "}
                   <h3 className="font-semibold text-white">
                     {" "}
-                    Plan Your Journey{" "}
+                   {t("guidebuddyPlanyourjourneyText")}{" "}
                   </h3>{" "}
-                  <p className="text-sm text-gray-400">
-                    {" "}
-                    Create itineraries and save your favorites{" "}
-                  </p>{" "}
+                  
                 </div>{" "}
               </div>{" "}
             </div>{" "}
@@ -137,7 +130,7 @@ const LoginRegisterPage = () => {
                 >
                   <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
                     <h2 className="text-2xl font-bold text-white mb-2">
-                      Welcome Back
+                     {t("welcome")}
                     </h2>
                     <p className="text-gray-300 text-sm mb-8">
                       Log in to continue your travel journey
@@ -182,14 +175,14 @@ const LoginRegisterPage = () => {
                           {/* Email Field */}
                           <div>
                             <label className="block text-white text-sm font-medium mb-2">
-                              Email
+                              {t("Email")}
                             </label>
                             <div className="relative">
                               <User className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" />
                               <Field
                                 type="email"
                                 name="email"
-                                placeholder="Enter your email"
+                                placeholder={t("enterEmail")}
                                 className={`w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 border ${
                                   errors.email && touched.email
                                     ? "border-red-500"
@@ -207,7 +200,7 @@ const LoginRegisterPage = () => {
                           {/* Password Field */}
                           <div>
                             <label className="block text-white text-sm font-medium mb-2">
-                              Password
+                              {t("Password")}
                             </label>
                             <div className="relative">
                               <Lock className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" />
@@ -247,20 +240,20 @@ const LoginRegisterPage = () => {
                             disabled={isSubmitting}
                             className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white font-semibold py-3 rounded-lg transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                           >
-                            {isSubmitting ? "Logging in..." : "Log In"}
+                            {isSubmitting ? t("Logging in...") : t("login")}
                             <ArrowRight className="w-4 h-4" />
                           </button>
                         </Form>
                       )}
                     </Formik>
                     <p className="text-center text-gray-300 text-sm mt-4">
-                      Don't have an account?{" "}
+                     {t("Dontyouhaveanaccount")}{" "}
                       <button
                         type="button"
                         onClick={toggleMode}
                         className="text-cyan-400 hover:text-cyan-300 font-semibold transition"
                       >
-                        Sign Up
+                        {t("Register")}
                       </button>
                     </p>
                   </div>
@@ -326,7 +319,7 @@ const LoginRegisterPage = () => {
                           {/* Username */}
                           <div>
                             <label className="block text-white text-xs font-medium mb-1">
-                              Username
+                              {t("Username")}
                             </label>
                             <div className="relative">
                               <User className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
@@ -350,7 +343,7 @@ const LoginRegisterPage = () => {
                           {/* Email */}
                           <div>
                             <label className="block text-white text-xs font-medium mb-1">
-                              Email
+                              {t("Email")}
                             </label>
                             <div className="relative">
                               <User className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
@@ -375,7 +368,7 @@ const LoginRegisterPage = () => {
                           {/* Password */}
                           <div>
                             <label className="block text-white text-xs font-medium mb-1">
-                              Password
+                              {t("Password")}
                             </label>
                             <div className="relative">
                               <Lock className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
@@ -411,7 +404,7 @@ const LoginRegisterPage = () => {
                           {/* Confirm Password */}
                           <div>
                             <label className="block text-white text-xs font-medium mb-1">
-                              Confirm Password
+                              {t("Confirm_Password")}
                             </label>
                             <div className="relative">
                               <Lock className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
@@ -454,7 +447,7 @@ const LoginRegisterPage = () => {
                             disabled={isSubmitting}
                             className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white font-semibold py-3 rounded-lg transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                           >
-                            {isSubmitting ? "Registering..." : "Create Account"}
+                            {isSubmitting ? t("Logging_in") : t("Register")}
                             <ArrowRight className="w-4 h-4" />
                           </button>
                         </Form>
@@ -462,13 +455,13 @@ const LoginRegisterPage = () => {
                     </Formik>
 
                     <p className="text-center text-gray-300 text-xs mt-2">
-                      Already have an account?{" "}
+                     {t("Alreadyhaveanaccount")}{" "}
                       <button
                         type="button"
                         onClick={toggleMode}
                         className="text-emerald-400 font-semibold"
                       >
-                        Log In
+                        {t("login")}
                       </button>
                     </p>
                   </div>

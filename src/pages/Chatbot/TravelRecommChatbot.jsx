@@ -13,13 +13,14 @@ import {
 import axios from "axios";
 import FormattedText from "../../components/FormattedText";
 import { SpinnerCircular } from "spinners-react";
-
+import { useTranslation } from "react-i18next";
 const TravelRecommChatbot = () => {
+    const { t } = useTranslation();
   const [messages, setMessages] = useState([
     {
       id: 1,
       sender: "bot",
-      text: "Hello! I'm your travel assistant. Where would you like to explore today?",
+      text: t("travelRecommendationsbotText"),
       timestamp: new Date().toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
