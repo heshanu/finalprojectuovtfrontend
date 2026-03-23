@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { User, Phone, Calendar, MapPin, Hotel, Plane, UtensilsCrossed, Coffee } from "lucide-react"
-
+import { useTranslation } from "react-i18next";
 export default function CustomerRegistrationForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNo: "",
