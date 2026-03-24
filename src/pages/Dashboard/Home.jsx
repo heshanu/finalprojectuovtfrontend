@@ -57,37 +57,6 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const { t } = useTranslation();
 
-  // Get username from localStorage
-  const [username, setUsername] = useState("");
-
-  const navigate = useNavigate();
-
-  // Modal state variables
-  const [editingCustomer, setEditingCustomer] = useState(null);
-  const [editFormData, setEditFormData] = useState({});
-  const [showEditModal, setShowEditModal] = useState(false);
-  const [showDeleteModal, setShowDeleteModal] = useState(null);
-  const [showStatusModal, setShowStatusModal] = useState(null);
-
-  // Check for stored username on component mount
-  useEffect(() => {
-    const storedUsername = localStorage.getItem("username");
-    if (storedUsername) {
-      setUsername(storedUsername);
-    }
-    if (!storedUsername) {
-    navigate("/");
-  }
-  }, []);
-
-  // Logout handler
-  const handleLogout = () => {
-    // Clear stored user data
-    localStorage.removeItem("username");
-    navigate("/");
-    toast.success("Logged out successfully!", { autoclose: 2000 });
-  };
-
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
