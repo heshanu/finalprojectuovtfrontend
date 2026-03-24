@@ -84,7 +84,7 @@ const Home = () => {
 
   const sidebarItems = [
     { id: "dashboard", icon: LayoutDashboard, label: t("sidebar.home") },
-    { id: "customer", icon: UserRound, label: t("sidebar.customeList") },
+    { id: "customer", icon: UserRound, label: t("sidebar.customerList") },
     { id: "trips", icon: Plane, label: t("sidebar.travelRecommendations") },
     { id: "chatbot", icon: NotebookPen, label: t("sidebar.customerRegister") },
     { id: "tripplanner", icon: BotMessageSquare, label: t("sidebar.supportBuddy") },

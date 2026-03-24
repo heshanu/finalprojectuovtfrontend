@@ -24,7 +24,7 @@ const resources = {
         guidebuddyPlanyourjourneyText:"Plan your journey with personalized recommendations and expert tips from our tourist guiders", 
         sidebar:{
             home: "Home",
-            customeList: "Custom List",
+            customerList: "Customer List",
             travelRecommendations: "Travel Recommendations",
             customerRegister: "Customer Register",
             supportBuddy: "Support Buddy",
@@ -55,7 +55,7 @@ const resources = {
         guidebuddyPlanyourjourneyText:"අපගේ සංචාරක මඟ පෙන්වන්නන්ගෙන් පුද්ගලික නිර්දේශ සහ විශේෂඥ උපදෙස් සමඟ ඔබේ ගමන සැලසුම් කරන්න",
         sidebar:{
             home: "මුල් පිටුව",
-            customeList: "අභිරුචි ලැයිස්තුව",
+            customerList: "පාරිභෝගික ලැයිස්තුව",
             travelRecommendations: "ගමන් නිර්දේශ",
             customerRegister: "පාරිභෝගික ලියාපදිංචි",
             supportBuddy: "සහාය",
@@ -87,7 +87,7 @@ const resources = {
         guidebuddyPlanyourjourneyText:"தனிப்பயன் பரிந்துரைகள் மற்றும் நிபுணர் குறிப்புகளுடன் உங்கள் பயணத்தை திட்டமிடுங்கள் எங்கள் சுற்றுலா வழிகாட்டிகளிடமிருந்து",
         sidebar:{
             home: "முகப்பு",
-            customeList: "தனிப்பயன் பட்டியல்",
+            customerList: "வாடிக்கையாளர் பட்டியல்",
             travelRecommendations: "பயண பரிந்துரைகள்",
             customerRegister: "வாடிக்கையாளர் பதிவு",
             supportBuddy: "ஆதரவு நண்பர்",
