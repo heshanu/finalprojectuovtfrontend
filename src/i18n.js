@@ -13,7 +13,7 @@ const resources = {
       Password: "Password",
       Confirm_Password: "Confirm Password",
       enterPassword: "Please enter your password",
-        enterEmail: "Please enter your email",
+      enterEmail: "Please enter your email",
             Logging_in: "Logging in...",
         Dontyouhaveanaccount: "Don't you have an account?",
         Register: "Register",
@@ -62,8 +62,8 @@ const resources = {
             settings: "සැකසුම්",
         },
         travelRecommendationsbotText:"හෙලෝ! මම ඔබේ ගමන් සහායකයා. අද ඔබ කොහේ ගමන් කිරීමට කැමතිද?" ,
-         customerRegisterbotText:"හෙලෝ! මම ඔබේ පාරිභෝගික ලියාපදිංචි නියෝජිතයා. මම ඔබට පාරිභෝගිකයින් ලියාපදිංචි කිරීමට උදව් කළ හැක. අද ඔබට කෙසේ උදව් කළ හැකිද?",
-         tripPlannerbottext:"හෙලෝ! මම ඔබේ ගමන් සැලසුම්කරු. මම ඔබට ගමන සැලසුම් කිරීමට සහ ගමන් නිර්දේශ ලබා දීමට උදව් කළ හැක. අද ඔබට කෙසේ උදව් කළ හැකිද?"
+        customerRegisterbotText:"හෙලෝ! මම ඔබේ පාරිභෝගික ලියාපදිංචි නියෝජිතයා. මම ඔබට පාරිභෝගිකයින් ලියාපදිංචි කිරීමට උදව් කළ හැක. අද ඔබට කෙසේ උදව් කළ හැකිද?",
+        tripPlannerbottext:"හෙලෝ! මම ඔබේ ගමන් සැලසුම්කරු. මම ඔබට ගමන සැලසුම් කිරීමට සහ ගමන් නිර්දේශ ලබා දීමට උදව් කළ හැක. අද ඔබට කෙසේ උදව් කළ හැකිද?"
 
     },
   },
